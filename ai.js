@@ -16,10 +16,8 @@ Format your response as HTML with this structure:
 Do NOT include html, head, or body tags. Only return the content HTML.
 `;
 
-// Garantir que é uma string
 const API_KEY = String(import.meta.env.VITE_HF_API_KEY).trim();
-
-const hf = new InferenceClient(API_KEY); // Passar direto como string
+const hf = new InferenceClient(API_KEY);
 
 export async function getRecipeFromAI(ingredientsArr) {
   const ingredientsString = ingredientsArr.join(", ");
@@ -56,6 +54,6 @@ export async function getRecipeFromAI(ingredientsArr) {
     
   } catch (err) {
     console.error("Error generating recipe:", err);
-    return "Sorry, couldn't generate a recipe right now.";
+    return "⚠️ This app cannot generate recipes on GitHub Pages. Please run locally to use AI features.";
   }
 }
