@@ -2,6 +2,8 @@
 
 A simple recipe generator application built with React and AI.
 
+🔗 **Live Demo:** https://matheus-braga6.github.io/react-chef-ai/
+
 ## 📚 About the project
 
 This project was developed as part of the **Learn React** course by Scrimba.
